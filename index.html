@@ -94,8 +94,100 @@
 							<ul>
 							<li><b>Total Project Volume: 1,009,708.38 ALGO</b></li>
 							<li><a href="https://thecryptomie.github.io/algorillas_nft_stats/">Algorillas Sales Analytics</a></li>
-							<li><a href="https://www.nftexplorer.app/collections?q=algorillas">NFT Collection</a></li
+							<li><a href="https://www.nftexplorer.app/collections?q=algorillas">NFT Collection</a></li>
 							</ul>
+							<div class="container">
+							  <!-- Full-width images with number text -->
+							  <div class="mySlides">
+<!--								<div class="numbertext">1 / 6</div>-->
+								  <div style="text-align: center;">
+								  <h2>Example Algorilla OG</h2>
+							 		 </div>
+								  <img class="animated-gif" src="images/algorilla_OG_26_captain_ape_hab.gif" style="width:30% height:30%">
+							  </div>
+
+							  <div class="mySlides">
+								<div style="text-align: center;">
+								  <h2>Example Algorilla Army</h2>
+							 		 </div>
+								  <img src="images/AGA34.png" style="width:50% height:50%">
+							  </div>
+
+							  <div class="mySlides">
+								<div style="text-align: center;">
+								  <h2>Example MetaRilla</h2>
+							 		 </div>
+								  <img src="images/metarilla1.jpg" style="width:50% height:50%">
+							  </div>
+
+							  <div class="mySlides">
+								<div style="text-align: center;">
+								  <h2>Example MetaCadet</h2>
+							 		 </div>
+								  <img src="images/metacadet94.jpg" style="width:50% height:50%">
+							  </div>
+								<div class="mySlides">
+								<div style="text-align: center;">
+								  <h2>Example APE (AlgoPrimateElite)</h2>
+							 		 </div>
+								  <img src="images/apes25.png" style="width:50% height:50%">
+							  </div>
+							<div class="mySlides">
+								<div style="text-align: center;">
+								  <h2>Example MetaEngineer</h2>
+							 		 </div>
+								  <img src="images/metaengineer46.jpg" style="width:50% height:50%">
+							  </div>
+							<div class="mySlides">
+								<div style="text-align: center;">
+								  <h2>Example MetaPilot</h2>
+							 		 </div>
+								  <img src="images/metapilot108.jpg" style="width:50% height:50%">
+							  </div>
+							<div class="mySlides">
+								<div style="text-align: center;">
+								  <h2>Example MetaDefender</h2>
+							 		 </div>
+								  <img src="images/metadefender72.jpg" style="width:50% height:50%">
+							  </div>
+
+							  <!-- Next and previous buttons -->
+							  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							  <!-- Image text -->
+<!--							  <div class="caption-container">-->
+<!--								<p id="caption"></p>-->
+<!--							  </div>-->
+
+							  <!-- Thumbnail images -->
+<!--							  <div class="row">-->
+<!--								<div class="column">-->
+<!--								  <img class="demo cursor" src="images/algorilla_OG_26_captain_ape_hab.gif" style="width:100%" onclick="currentSlide(1)" alt="Example Algorilla OG">-->
+<!--								</div>-->
+<!--								<div class="column">-->
+<!--								  <img class="demo cursor" src="images/AGA34.png" style="width:100%" onclick="currentSlide(2)" alt="Example Algorilla Army">-->
+<!--								</div>-->
+<!--								<div class="column">-->
+<!--								  <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Example MetaRilla">-->
+<!--								</div>-->
+<!--								<div class="column">-->
+<!--								  <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Example MetaCadet">-->
+<!--								</div>-->
+<!--								<div class="column">-->
+<!--								  <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Example APE (AlgoPrimateElite)">-->
+<!--								</div>-->
+<!--								<div class="column">-->
+<!--								  <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Example MetaEngineer">-->
+<!--								</div>-->
+<!--								  <div class="column">-->
+<!--								  	<img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Example MetaPilot">-->
+<!--								</div>-->
+<!--								  <div class="column">-->
+<!--								  <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Example MetaDefender">-->
+<!--								</div>-->
+<!--							  </div>-->
+							</div>
 
 
 							</p>
@@ -476,6 +568,36 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("demo");
+			  let captionText = document.getElementById("caption");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  captionText.innerHTML = dots[slideIndex-1].alt;
+			}
+			</script>
 			<script>
 				var coll = document.getElementsByClassName("collapsible");
 				var i;
