@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/APEs_CauchyCommission_downgraded.jpg" alt="" /></span>
+							<h1 id="title">thecryptomie</h1>
+							<p>Nerd</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#home" id="home-link">Home</a></li>
+								<li><a href="#tldr" id="tldr">TLDR</a></li>
+								<li><a href="#how" id="intro">Battle Week</a></li>
+								<li><a href="#battle-bot" id="battlebot">Battle Bot</a></li>
+								<li><a href="#bot-commands" id="botcommands">Bot Commands</a></li>
+<!--								<li><a href="#algorand-info" id="algorand-info-link">Algorand Info</a></li>-->
+<!--								<li><a href="#algorand-nft-info" id="algorand-nft-">Algorand NFTs</a></li>-->
+<!--								<li><a href="#algorand-trading" id="algorand-dex-link">Algorand Trading</a></li>-->
+<!--								<li><a href="#algorand-lending-info" id="algorand-lending-link">Algorand Lending</a></li>-->
+								<!-- <li><a href="#sales-history" id="contact-link">Sales History</a></li> -->
+
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/thecryptomie" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+							<!-- <li><a href="" class="icon brands fa-github"><span class="label">Github</span></a></li> -->
+							<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+							<!-- <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
+						</ul>
+
+				</div>
+
+			</div>
+        <div id="main">
+            <section id="home" class = "one dark cover">
+                <div>
+                    <h2>Algorillas Battle Week</h2>
+                </div>
+            </section>
+
+            <section id="tldr", class="two">
+				<div class="container">
+					<div style="display: inline-block; text-align: left;">
+						<h2>TLDR</h2>
+						<p class="indent">
+							Battle Week is a week-long contest where Algorilla Army holders go head-to-head for
+							prizes. The battle winners will be determined by the battle bot. Each participant will be assigned a
+							randomly generated list of 25 battles (this number may change) and have 7 days to complete them. Each battle week, a
+							series of traits will be chosen and given a boost to enhance their overall rarity score and
+							increase their odds of winning a battle. Prizes will be given out each Battle Week (ALGO, NFTs,
+							WL spots, and who knows what else!)
+						</p>
+                	</div>
+				</div>
+            </section>
+			<section id="how" class="three">
+				<div class="container">
+					<div style="display: inline-block; text-align: left;">
+						<h2>Battle Week Phases</h2>
+						<p class="indent">
+							<h3>Registration</h3>
+							Everyone who wants to participate registers with
+							the <b>battle_bot</b> in the <b>#battles</b>
+							channel of the algorillas discord.
+							<h3>Battling</h3>
+							After registration closes, each registered user is
+							assigned a battle list that they must complete
+						throughout the week. <br>
+
+							<span>
+								<img src="images/example_battle_list.png" alt="" width="50%" height="50%"/>
+							</span>
+						<br>
+							<h3>Determining the Winner</h3>
+							At the end of the week, the user with the highest
+							record is declared the winner and takes the
+							first place prize.
+						</p>
+                	</div>
+				</div>
+            </section>
+			<section id="battle-bot" class="two">
+				<div class="container">
+					<div style="display: inline-block; text-align: left;">
+						<h2>Battle Bot Functionality</h2>
+						<p class="indent">
+							<h3>Probabilities</h3>
+							For each matchup, the rarity scores are used to compute
+							the chances of winning for each NFT. <br> If <b>RSN</b>
+							is the rarity score of player N, then the odds for each
+							player are given by,
+							<br>
+							Player 1: RS1/(RS1 + RS2)
+							<br>
+							Player 2: RS2/(RS1 + RS2)
+						</p>
+						<p>
+							<h3>Example</h3>
+							<b>AGA405 vs AGA301</b> <br>
+							AGA405 odds: 100*(316.33/(469.11 + 316.33)) = 40.27% <br>
+							AGA301 odds: 100*(469.11/(469.11 + 316.33)) = 59.73%
+							<br><br>
+
+							Using the probabilities computed above, we then perform as random
+							selection where the probabilities correspond to the weights in the
+							random draw. In this matchup, AGA301 has a 59.73% of being drawn.
+							<br><br>
+							Each battle consists of 5 draws, the NFT chosen 3 times is
+							the winner and the battle statistics are recorded. In
+							the battle below, AGA301 (orange space suit) defeated AGA405 (laser eyes) with
+							a final score of 3 to 1.
+
+						<br>
+							<span>
+								<img src="images/AGA301_vs_AGA405_loop.gif" alt="" width="50%" height="50%" class="center"/>
+							</span>
+
+						</p>
+                	</div>
+				</div>
+            </section>
+			<section id="bot-commands" class="three">
+				<div class="container">
+					<div style="display: inline-block; text-align: left;">
+						<h2>Battle Bot Commands</h2>
+						<p class="indent">
+							<table>
+								<tr>
+									<th>Command</th>
+									<th>Description</th>
+								  </tr>
+							  	<tr>
+								  <td><b>/register</b></td>
+								  <td>Register your wallet address or NFD with the battle bot</td>
+							  	</tr>
+							  	<tr>
+								  <td><b>/wallet_info</b></td>
+								  <td>Show the list AGAs held by the wallet registered by the user. Listed AGA are excluded.</td>
+							  	</tr>
+								<tr>
+								  <td><b>/add</b></td>
+								  <td>Add an AGA to the battle list. This makes the AGA available for battle and signs you up for any future Battle Weeks.</td>
+							  	</tr>
+							  	<tr>
+									<td><b>/remove</b></td>
+									<td>Remove an AGA from your battle list. You can only battle with AGAs that are in your wallet</td>
+							  	</tr>
+							  	<tr>
+									<td><b>/my_entries</b></td>
+									<td>Show all of the AGAs added to the battle list by the user. If you list an AGA you have entered, it will be removed from this list.</td>
+							  	</tr>
+							  	<tr>
+									<td><b>/entrants</b></td>
+									<td>Show the list of AGAs that are available for battling.</td>
+							  	</tr>
+							  	<tr>
+									<td><b>/weekly_battles</b></td>
+									<td>Show the list of weekly battles you have been assigned. After a battle is completed, the corresponding entry will be shown with strikethrough text.</td>
+							  	</tr>
+							  	<tr>
+									<td><b>/battle</b></td>
+									<td>Battle an available AGA using the battle bot.. To conduct a weekly battle, you need to pass the weekly argument like you see below. If not, it will only count towards your all time record.</td>
+							  	</tr>
+							  	<tr>
+									<td><b>/my_stats</b></td>
+									<td>List your all time battle stats and your weekly battle stats.</td>
+							  	</tr>
+							</table>
+						</p>
+
+                	</div>
+				</div>
+            </section>
+<!--        </div>-->
+
+<!--			<section id="battlebot", class="two">-->
+<!--				<div class="container">-->
+<!--					<div style="display: inline-block; text-align: left;">-->
+<!--						<p>battle bot</p>-->
+<!--&lt;!&ndash;						<h2>Battle Bot</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;						<p class="indent">&ndash;&gt;-->
+<!--&lt;!&ndash;							<b>Probabilities</b>&ndash;&gt;-->
+<!--&lt;!&ndash;						</p>&ndash;&gt;-->
+
+<!--					</div>-->
+<!--				</div>-->
+<!--			</section>-->
+        </div>
+
+		<!-- Main -->
+<!--			<div id="main">-->
+<!--				<section id="home" class="one dark cover">-->
+<!--					<header>-->
+<!--						<h2>Welcome</h2>-->
+<!--					</header>-->
+
+<!--				</section>-->
+
+<!--				&lt;!&ndash; About Me &ndash;&gt;-->
+<!--				<section id="about-me" class="two">-->
+<!--						<div class="container">-->
+
+<!--							<header>-->
+<!--								<h2>About Me</h2>-->
+<!--							</header>-->
+<!--							<div style="display: inline-block; text-align: left;">-->
+<!--								<p>-->
+<!--									Curious person exploring the Algorand ecosystem.-->
+<!--								</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</section>-->
+
+<!--				<section id="algorand-info" class="three">-->
+<!--					<div class="container">-->
+<!--						<header>-->
+<!--							<h2>Algorand Information</h2>-->
+<!--						</header>-->
+<!--						<div style="display: inline-block; text-align: left;">-->
+<!--							<h3><a href="https://algorand.foundation/">Algorand Foundation</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the Algorand Foundation.-->
+<!--										Go here for press releases and general information about the Algorand Ecosystem-->
+<!--									</li>-->
+<!--								</ul>-->
+<!--							<h3><a href="https://governance.algorand.foundation/governance-period-3">Algorand Governance Platform</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the Algorand Governance Platform.-->
+<!--										Go here to get the latest status on the proposals in the current round of governance.-->
+<!--									</li>-->
+<!--								</ul>-->
+<!--							<h3><a href="https://algogovclub.substack.com/">AlgoGovClub Blogpost</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of <a href="https://twitter.com/algorandgovclub?lang=en">@AlgorandGovClub</a> blog post.-->
+<!--										Go here for in-depth information about the algorand ecosystem, as well as stratgies for managing risk/reward-->
+<!--										in the Algorand DeFi ecosystem.-->
+<!--									</li>-->
+<!--								</ul>-->
+
+<!--						</div>-->
+<!--					</div>-->
+<!--				</section>-->
+
+<!--				<section id="algorand-nft-info" class="two">-->
+<!--						<div class="container">-->
+<!--							<header>-->
+<!--								<h2>Algorand NFT Information</h2>-->
+<!--							</header>-->
+
+<!--							<div style="display: inline-block; text-align: left;">-->
+<!--								<h3><a href="https://www.nftexplorer.app/">NFTExplorer</a></h3>-->
+<!--									<ul>-->
+<!--										<li>-->
+<!--											A one-stop shop for Algorand-->
+<!--											NFT information; search for listings across multiple NFT marketplaces,-->
+<!--											explore newly minted collections, generate sales data, and view the-->
+<!--											top projects by sales volume.-->
+<!--										</li>-->
+<!--										<li>-->
+<!--											<a href="https://www.nftexplorer.app/rankings">Project Rankings</a>-->
+<!--										</li>-->
+<!--										<li>-->
+<!--											<a href="https://www.nftexplorer.app/stats">Algorand NFT Statistics</a>-->
+<!--										</li>-->
+<!--									</ul>-->
+
+<!--								<h3>Algorand NFT Marketplaces</h3>-->
+<!--									<ul>-->
+<!--										<li>-->
+<!--											<a href="https://www.randgallery.com/algo-collection/">Rand Gallery</a>-->
+<!--										</li>-->
+<!--										<li>-->
+<!--											<a href="https://algoxnft.com/">ALGOxNFT</a>-->
+<!--										</li>-->
+<!--										<li>-->
+<!--											<a href="https://ab2.gallery/">AB2 Gallery</a>-->
+<!--										</li>-->
+<!--									</ul>-->
+<!--								<h3><a href="https://www.asalytic.app/">Asalytic</a></h3>-->
+<!--									<ul>-->
+<!--										<li>-->
+<!--											Homepage of the Asalytic website. Go here to analyze the-->
+<!--											the sales history of various NFT collections. Note, not all-->
+<!--											collections are included-->
+<!--										</li>-->
+
+<!--									</ul>-->
+
+<!--								<h3><a href="https://thecryptomie.github.io/algorillas_nft_stats/">Algorillas NFT Stats</a></h3>-->
+<!--									<ul>-->
+<!--										<li>-->
+<!--											Go here to get an in-depth look at the sales volume across the Algorillas Collections.-->
+<!--											View things like the average secondary sale price of an NFT from any of the collections-->
+<!--											(Algorilla Army, Algorilla OG, Metarillas, etc...), or the average secondary sale price-->
+<!--											as a function of the rarity rank.-->
+<!--										</li>-->
+
+<!--									</ul>-->
+
+<!--								<h3><a href="https://app.swapper.tools/">Algorand Swapper Tool</a></h3>-->
+<!--									<ul>-->
+<!--										<li>-->
+<!--											Homepage of the Swapper Tool built by <a href="https://twitter.com/Silventino">@silventino</a>.-->
+<!--											Fantastic tool for constructing and executing complicated trades in a secure manner.-->
+<!--											For example, trading 1 NFT + 50 ALGO for another NFT.-->
+<!--										</li>-->
+<!--									</ul>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</section>-->
+
+<!--				<section id="algorand-trading" class="four">-->
+<!--					<div class="container">-->
+<!--						<header>-->
+<!--							<h2>Trading on Algorand</h2>-->
+<!--						</header>-->
+<!--						<div style="display: inline-block; text-align: left;">-->
+<!--							<h3><a href="https://tinyman.org/">Tinyman</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the Tinyman DEX.-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<a href="https://app.tinyman.org/#/analytics">DEX Analytics</a>-->
+<!--									</li>-->
+<!--								</ul>-->
+<!--							<h3><a href="https://www.algofi.org/">Algofi</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the Algofi DEX.-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<a href="https://info.algofi.org/dex-info/">DEX Analytics</a>-->
+<!--									</li>-->
+<!--								</ul>-->
+
+<!--							<h3><a href="https://www.pact.fi/">Pact</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the Pact DEX.-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<a href="https://app.pact.fi/analytics/overview">DEX Analytics</a>-->
+<!--									</li>-->
+<!--								</ul>-->
+<!--							<h3><a href="https://tinychart.org/">Tinychart</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the Tinychart. Go here for up-to-date prices on Algorand ASAs-->
+<!--										trading on various DEXs.-->
+<!--									</li>-->
+<!--								</ul>-->
+
+<!--						</div>-->
+<!--					</div>-->
+<!--				</section>-->
+
+<!--				<section id="algorand-lending-info" class="five">-->
+<!--					<div class="container">-->
+<!--						<header>-->
+<!--							<h2>Capital Market Protocols on Algorand</h2>-->
+<!--						</header>-->
+
+<!--						<div style="display: inline-block; text-align: left;">-->
+<!--							<h3><a href="https://folks.finance/">Algofi</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the Algofi capital market protocl.-->
+<!--										Go here to suppy or borrow assets from the Algofi lending market.-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<a href="https://info.algofi.org/lend-info/">Market Analytics</a>-->
+<!--									</li>-->
+<!--								</ul>-->
+
+<!--							<h3><a href="https://folks.finance/">Folks Finance</a></h3>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										Homepage of the FolksFinance capital market protocl.-->
+<!--										Go here to suppy or borrow assets from the Folks Finance lending market.-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<a href="https://app.folks.finance/markets">Market Analytics</a>-->
+<!--									</li>-->
+<!--								</ul>-->
+
+<!--						</div>-->
+<!--					</div>-->
+<!--				</section>-->
+
+<!--				</div>-->
+
+
+
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; TheCryptomie. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				var coll = document.getElementsByClassName("collapsible");
+				var i;
+
+				for (i = 0; i < coll.length; i++) {
+				  coll[i].addEventListener("click", function() {
+				    this.classList.toggle("active");
+				    var content = this.nextElementSibling;
+				    if (content.style.display === "block") {
+				      content.style.display = "none";
+				    } else {
+				      content.style.display = "block";
+				    }
+				  });
+				}
+			</script>
+
+	</body>
+</html>
