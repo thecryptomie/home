@@ -26,7 +26,7 @@
 								<li><a href="#home" id="home-link">Home</a></li>
 								<li><a href="#tldr" id="tldr-page">TLDR</a></li>
 								<li><a href="#how" id="intro">Battle Week</a></li>
-								<li><a href="#battle-bot" id="battlebot">Battle Bot</a></li>
+<!--								<li><a href="#battle-bot" id="battlebot">Battle Bot</a></li>-->
 								<li><a href="#bot-commands" id="botcommands">Bot Commands</a></li>
 <!--								<li><a href="#algorand-info" id="algorand-info-link">Algorand Info</a></li>-->
 <!--								<li><a href="#algorand-nft-info" id="algorand-nft-">Algorand NFTs</a></li>-->
@@ -77,6 +77,10 @@
                 	</div>
 				</div>
             </section>
+
+
+
+			</section>
 			<section id="how" class="three">
 				<div class="container">
 					<div style="display: inline-block; text-align: left;">
@@ -104,47 +108,7 @@
                 	</div>
 				</div>
             </section>
-			<section id="battle-bot" class="two">
-				<div class="container">
-					<div style="display: inline-block; text-align: left;">
-						<h2>Battle Bot Functionality</h2>
-						<p class="indent">
-							<h3>Probabilities</h3>
-							For each matchup, the rarity scores are used to compute
-							the chances of winning for each NFT. <br> If <b>RSN</b>
-							is the rarity score of player N, then the odds for each
-							player are given by,
-							<br>
-							Player 1: RS1/(RS1 + RS2)
-							<br>
-							Player 2: RS2/(RS1 + RS2)
-						</p>
-						<p>
-							<h3>Example</h3>
-							<b>AGA405 vs AGA301</b> <br>
-							AGA405 odds: 100*(316.33/(469.11 + 316.33)) = 40.27% <br>
-							AGA301 odds: 100*(469.11/(469.11 + 316.33)) = 59.73%
-							<br><br>
-
-							Using the probabilities computed above, we then perform as random
-							selection where the probabilities correspond to the weights in the
-							random draw. In this matchup, AGA301 has a 59.73% of being drawn.
-							<br><br>
-							Each battle consists of 5 draws, the NFT chosen 3 times is
-							the winner and the battle statistics are recorded. In
-							the battle below, AGA301 (orange space suit) defeated AGA405 (laser eyes) with
-							a final score of 3 to 1.
-
-						<br>
-							<span>
-								<img src="images/AGA301_vs_AGA405_loop.gif" alt="" width="50%" height="50%" class="center"/>
-							</span>
-
-						</p>
-                	</div>
-				</div>
-            </section>
-			<section id="bot-commands" class="three">
+			<section id="bot-commands" class="two">
 				<div class="container">
 					<div style="display: inline-block; text-align: left;">
 						<h2>Battle Bot Commands</h2>
@@ -207,227 +171,10 @@
                 	</div>
 				</div>
             </section>
-<!--        </div>-->
 
-<!--			<section id="battlebot", class="two">-->
-<!--				<div class="container">-->
-<!--					<div style="display: inline-block; text-align: left;">-->
-<!--						<p>battle bot</p>-->
-<!--&lt;!&ndash;						<h2>Battle Bot</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;						<p class="indent">&ndash;&gt;-->
-<!--&lt;!&ndash;							<b>Probabilities</b>&ndash;&gt;-->
-<!--&lt;!&ndash;						</p>&ndash;&gt;-->
-
-<!--					</div>-->
-<!--				</div>-->
-<!--			</section>-->
         </div>
 
-		<!-- Main -->
-<!--			<div id="main">-->
-<!--				<section id="home" class="one dark cover">-->
-<!--					<header>-->
-<!--						<h2>Welcome</h2>-->
-<!--					</header>-->
 
-<!--				</section>-->
-
-<!--				&lt;!&ndash; About Me &ndash;&gt;-->
-<!--				<section id="about-me" class="two">-->
-<!--						<div class="container">-->
-
-<!--							<header>-->
-<!--								<h2>About Me</h2>-->
-<!--							</header>-->
-<!--							<div style="display: inline-block; text-align: left;">-->
-<!--								<p>-->
-<!--									Curious person exploring the Algorand ecosystem.-->
-<!--								</p>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</section>-->
-
-<!--				<section id="algorand-info" class="three">-->
-<!--					<div class="container">-->
-<!--						<header>-->
-<!--							<h2>Algorand Information</h2>-->
-<!--						</header>-->
-<!--						<div style="display: inline-block; text-align: left;">-->
-<!--							<h3><a href="https://algorand.foundation/">Algorand Foundation</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the Algorand Foundation.-->
-<!--										Go here for press releases and general information about the Algorand Ecosystem-->
-<!--									</li>-->
-<!--								</ul>-->
-<!--							<h3><a href="https://governance.algorand.foundation/governance-period-3">Algorand Governance Platform</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the Algorand Governance Platform.-->
-<!--										Go here to get the latest status on the proposals in the current round of governance.-->
-<!--									</li>-->
-<!--								</ul>-->
-<!--							<h3><a href="https://algogovclub.substack.com/">AlgoGovClub Blogpost</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of <a href="https://twitter.com/algorandgovclub?lang=en">@AlgorandGovClub</a> blog post.-->
-<!--										Go here for in-depth information about the algorand ecosystem, as well as stratgies for managing risk/reward-->
-<!--										in the Algorand DeFi ecosystem.-->
-<!--									</li>-->
-<!--								</ul>-->
-
-<!--						</div>-->
-<!--					</div>-->
-<!--				</section>-->
-
-<!--				<section id="algorand-nft-info" class="two">-->
-<!--						<div class="container">-->
-<!--							<header>-->
-<!--								<h2>Algorand NFT Information</h2>-->
-<!--							</header>-->
-
-<!--							<div style="display: inline-block; text-align: left;">-->
-<!--								<h3><a href="https://www.nftexplorer.app/">NFTExplorer</a></h3>-->
-<!--									<ul>-->
-<!--										<li>-->
-<!--											A one-stop shop for Algorand-->
-<!--											NFT information; search for listings across multiple NFT marketplaces,-->
-<!--											explore newly minted collections, generate sales data, and view the-->
-<!--											top projects by sales volume.-->
-<!--										</li>-->
-<!--										<li>-->
-<!--											<a href="https://www.nftexplorer.app/rankings">Project Rankings</a>-->
-<!--										</li>-->
-<!--										<li>-->
-<!--											<a href="https://www.nftexplorer.app/stats">Algorand NFT Statistics</a>-->
-<!--										</li>-->
-<!--									</ul>-->
-
-<!--								<h3>Algorand NFT Marketplaces</h3>-->
-<!--									<ul>-->
-<!--										<li>-->
-<!--											<a href="https://www.randgallery.com/algo-collection/">Rand Gallery</a>-->
-<!--										</li>-->
-<!--										<li>-->
-<!--											<a href="https://algoxnft.com/">ALGOxNFT</a>-->
-<!--										</li>-->
-<!--										<li>-->
-<!--											<a href="https://ab2.gallery/">AB2 Gallery</a>-->
-<!--										</li>-->
-<!--									</ul>-->
-<!--								<h3><a href="https://www.asalytic.app/">Asalytic</a></h3>-->
-<!--									<ul>-->
-<!--										<li>-->
-<!--											Homepage of the Asalytic website. Go here to analyze the-->
-<!--											the sales history of various NFT collections. Note, not all-->
-<!--											collections are included-->
-<!--										</li>-->
-
-<!--									</ul>-->
-
-<!--								<h3><a href="https://thecryptomie.github.io/algorillas_nft_stats/">Algorillas NFT Stats</a></h3>-->
-<!--									<ul>-->
-<!--										<li>-->
-<!--											Go here to get an in-depth look at the sales volume across the Algorillas Collections.-->
-<!--											View things like the average secondary sale price of an NFT from any of the collections-->
-<!--											(Algorilla Army, Algorilla OG, Metarillas, etc...), or the average secondary sale price-->
-<!--											as a function of the rarity rank.-->
-<!--										</li>-->
-
-<!--									</ul>-->
-
-<!--								<h3><a href="https://app.swapper.tools/">Algorand Swapper Tool</a></h3>-->
-<!--									<ul>-->
-<!--										<li>-->
-<!--											Homepage of the Swapper Tool built by <a href="https://twitter.com/Silventino">@silventino</a>.-->
-<!--											Fantastic tool for constructing and executing complicated trades in a secure manner.-->
-<!--											For example, trading 1 NFT + 50 ALGO for another NFT.-->
-<!--										</li>-->
-<!--									</ul>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</section>-->
-
-<!--				<section id="algorand-trading" class="four">-->
-<!--					<div class="container">-->
-<!--						<header>-->
-<!--							<h2>Trading on Algorand</h2>-->
-<!--						</header>-->
-<!--						<div style="display: inline-block; text-align: left;">-->
-<!--							<h3><a href="https://tinyman.org/">Tinyman</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the Tinyman DEX.-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<a href="https://app.tinyman.org/#/analytics">DEX Analytics</a>-->
-<!--									</li>-->
-<!--								</ul>-->
-<!--							<h3><a href="https://www.algofi.org/">Algofi</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the Algofi DEX.-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<a href="https://info.algofi.org/dex-info/">DEX Analytics</a>-->
-<!--									</li>-->
-<!--								</ul>-->
-
-<!--							<h3><a href="https://www.pact.fi/">Pact</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the Pact DEX.-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<a href="https://app.pact.fi/analytics/overview">DEX Analytics</a>-->
-<!--									</li>-->
-<!--								</ul>-->
-<!--							<h3><a href="https://tinychart.org/">Tinychart</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the Tinychart. Go here for up-to-date prices on Algorand ASAs-->
-<!--										trading on various DEXs.-->
-<!--									</li>-->
-<!--								</ul>-->
-
-<!--						</div>-->
-<!--					</div>-->
-<!--				</section>-->
-
-<!--				<section id="algorand-lending-info" class="five">-->
-<!--					<div class="container">-->
-<!--						<header>-->
-<!--							<h2>Capital Market Protocols on Algorand</h2>-->
-<!--						</header>-->
-
-<!--						<div style="display: inline-block; text-align: left;">-->
-<!--							<h3><a href="https://folks.finance/">Algofi</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the Algofi capital market protocl.-->
-<!--										Go here to suppy or borrow assets from the Algofi lending market.-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<a href="https://info.algofi.org/lend-info/">Market Analytics</a>-->
-<!--									</li>-->
-<!--								</ul>-->
-
-<!--							<h3><a href="https://folks.finance/">Folks Finance</a></h3>-->
-<!--								<ul>-->
-<!--									<li>-->
-<!--										Homepage of the FolksFinance capital market protocl.-->
-<!--										Go here to suppy or borrow assets from the Folks Finance lending market.-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<a href="https://app.folks.finance/markets">Market Analytics</a>-->
-<!--									</li>-->
-<!--								</ul>-->
-
-<!--						</div>-->
-<!--					</div>-->
-<!--				</section>-->
-
-<!--				</div>-->
 
 
 
