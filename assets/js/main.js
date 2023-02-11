@@ -37,7 +37,7 @@
 
 				// External link? Bail.
 					if ($this.attr('href').charAt(0) != '#')
-					    window.location.href = ($this.target).attr('href');
+					    window.location.href = ($this.target).attr('href')
 						return;
 
 				// Prevent default.
