@@ -46,6 +46,7 @@
 								<li><a href="#multicollection" id="multi-page">Multicollection</a></li>
 								<li><a href="#how-it-works" id="intro">How it Works</a></li>
 								<li><a href="#bot-commands" id="botcommands">Bot Commands</a></li>
+								<li><a href="https://thecryptomie.github.io/home/battle_week.html">Battle Week</a></li>
 
 							</ul>
 <!--							-->
@@ -129,12 +130,12 @@
 					<div style="display: inline-block; text-align: left;">
 						<h2>Multicollection Support</h2>
 						<p>
-							To handle multicollection support, we normalize the
-							rarity scores such that their rarity score
-							distributions are approximately aligned. This ensures
+							To handle multicollection support, we normalize and
+							align the rarity scores distributions to maximize
+							the overlap amongst the collections. This ensures
 							that a high ranking NFT in one collection has better odds
 							 of winning against a low ranking NFT in a different
-							collection, regardless of their respective
+							collection, regardless of the respective
 							collection sizes.
 						</p>
 						<p>
@@ -3136,7 +3137,7 @@ document.querySelector('#btn').addEventListener('click', function() {
                 	</div>
 				</div>
             </section>
-			<section id="bot-commands" class="three">
+			<section id="bot-commands" class="two">
 				<div class="container">
 					<div style="display: inline-block; text-align: left;">
 						<h2>Battle Bot Commands</h2>
@@ -3255,6 +3256,16 @@ document.querySelector('#btn').addEventListener('click', function() {
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					document.querySelector(this.getAttribute('href')).scrollIntoView({
+						behavior: 'smooth'
+					});
+				});
+			});
+
 				var coll = document.getElementsByClassName("collapsible");
 				var i;
 
